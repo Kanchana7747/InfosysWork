@@ -1,3 +1,34 @@
+# Module 1: Data Preprocessing & EDA (Air Quality)
+
+This module focuses on preparing and analyzing air quality datasets to understand pollutant trends and build a foundation for forecasting.
+
+## 📊 Datasets
+- **CPCB**: Central Pollution Control Board (India)  
+- **OpenAQ**: Open-source global air quality dataset  
+
+> Datasets can be stored in `data/` or downloaded via APIs.
+
+## 🔧 Steps Performed
+1. **Download & Load Data**
+   - Fetched datasets from CPCB and OpenAQ
+   - Handled missing values and outliers
+
+2. **Data Preprocessing**
+   - Standardized column names
+   - Converted timestamps to datetime objects
+   - Removed duplicates
+   - Imputed missing pollutant readings
+
+3. **Exploratory Data Analysis (EDA)**
+   - Checked distribution of pollutants (PM2.5, PM10, NO2, SO2, CO, O3, etc.)
+   - Trend analysis over time (daily, weekly, monthly)
+   - Correlation heatmaps between pollutants
+
+4. **Resampling & Feature Engineering**
+   - Resampled to hourly/daily averages
+   - Created lag features for forecasting
+   - Added rolling averages (e.g., 7-day moving average)
+
 # --------------------------------------------------------
 # DATA PREPROCESSING IN PYTHON
 # --------------------------------------------------------
