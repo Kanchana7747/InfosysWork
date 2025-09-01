@@ -1,39 +1,51 @@
 # -------------------------
-# STRING METHODS
+# STRING METHODS IN PYTHON
 # -------------------------
-# Python provides many built-in methods to manipulate strings.
+# Strings in Python come with many built-in methods to manipulate and analyze text.
 
 text = "  python programming  "
 
-print("Original:", repr(text))
-print("Uppercase:", text.upper())
-print("Lowercase:", text.lower())
-print("Title Case:", text.title())
-print("Strip spaces:", text.strip())
-print("Replace words:", text.replace("python", "java"))
-print("Split into list:", text.split())
-print("Count of 'm':", text.count("m"))
-print("Starts with 'py':", text.startswith("py"))
-print("Ends with 'ing':", text.endswith("ing"))
+print("Original:", repr(text))             # repr() shows spaces clearly
+print("Uppercase:", text.upper())          # Convert to uppercase
+print("Lowercase:", text.lower())          # Convert to lowercase
+print("Title Case:", text.title())         # Capitalize each word
+print("Strip spaces:", text.strip())       # Remove leading/trailing spaces
+print("Replace words:", text.replace("python", "java"))  # Replace substring
+print("Split into list:", text.split())    # Split by spaces → list of words
+print("Count of 'm':", text.count("m"))    # Count occurrences
+print("Starts with 'py':", text.startswith("py"))  # Check prefix
+print("Ends with 'ing':", text.endswith("ing"))    # Check suffix
+print("Find position of 'pro':", text.find("pro")) # Returns index of substring
+print("Is alphabetic?", text.isalpha())    # False → has spaces
+print("Is alphanumeric?", text.isalnum())  # False → spaces not allowed
+print("Is digit?", "123".isdigit())        # True → only digits
 
-# Print only alphabets from a string
+# -------------------------
+# PRINT ONLY ALPHABETS
+# -------------------------
+s = input("\nEnter a string (to print only alphabets): ")
 
-s = input("Enter a string: ")
-
+print("Alphabets only:", end=" ")
 for ch in s:
     if ch.isalpha():   # checks if character is alphabet
         print(ch, end="")
-# Print only uppercase letters from a string
+print()  # new line
 
-s = input("Enter a string: ")
+# -------------------------
+# PRINT ONLY UPPERCASE LETTERS
+# -------------------------
+s = input("\nEnter a string (to print only uppercase letters): ")
 
+print("Uppercase letters only:", end=" ")
 for ch in s:
     if ch.isupper():   # checks if character is uppercase
         print(ch, end="")
-        
-# Simple Calculator
+print()  # new line
 
-a = float(input("Enter first number: "))
+# -------------------------
+# SIMPLE CALCULATOR
+# -------------------------
+a = float(input("\nEnter first number: "))
 b = float(input("Enter second number: "))
 
 print("Choose operation: +, -, *, /")
@@ -52,4 +64,3 @@ elif op == '/':
         print("Error: Division by zero not allowed")
 else:
     print("Invalid Operator")
-
